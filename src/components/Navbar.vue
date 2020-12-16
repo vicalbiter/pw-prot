@@ -32,7 +32,7 @@
         <div class="side-nav-menu">
           <b-list-group flush>
             <b-list-group-item :to="{ name: 'Home' }">Home</b-list-group-item>
-            <b-list-group-item :to="{ name: 'About' }">About</b-list-group-item>
+            <b-list-group-item :to="{ name: 'Users' }">Users</b-list-group-item>
             <b-list-group-item>Another Link</b-list-group-item>
             <b-list-group-item disabled>Disabled</b-list-group-item>
           </b-list-group>

@@ -1,6 +1,6 @@
 <template>
-  <div class="container pt-3 pb-5">
-    <h2>Data Table</h2>
+  <div class="container-fluid pt-3 pb-5">
+    <h2>User Table</h2>
 
     <b-row class="mb-3">
       <b-col>
@@ -15,7 +15,7 @@
 
     <b-row>
       <b-col>
-        <b-table head-variant="dark" bordered striped hover :items="users" :fields="fields" :filter="filter" :per-page="perPage" :current-page="currentPage" @filtered="getFilteredResults" caption-top>
+        <b-table responsive head-variant="dark" bordered striped hover :items="users" :fields="fields" :filter="filter" :per-page="perPage" :current-page="currentPage" @filtered="getFilteredResults" caption-top>
 
           <template v-slot:cell(actions)="data">
             <b-icon icon="trash-fill" class="action-icons" @click="deleteUser(data.item.id)"></b-icon>
@@ -25,7 +25,15 @@
           <template v-if="filter" #table-caption>{{ filteredResults }} result(s) found.</template>
 
         </b-table>
-        <b-pagination pills size="sm" align="right" v-model="currentPage" :total-rows="rows" :per-page="perPage"></b-pagination>
+      </b-col>
+    </b-row>
+    
+    <b-row align-h="between">
+      <b-col cols="4">
+        <b-pagination pills size="sm" align="left" v-model="currentPage" :total-rows="rows" :per-page="perPage"></b-pagination>
+      </b-col>
+      <b-col cols="4" class="text-right mr-2">
+        <b-button variant="primary">Add User</b-button>
       </b-col>
     </b-row>
 
@@ -34,6 +42,7 @@
 
 <script>
 export default {
+  name: 'Users',
   data() {
     return {
       users: [],
