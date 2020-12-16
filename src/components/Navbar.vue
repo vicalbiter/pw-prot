@@ -76,9 +76,9 @@ body {
 
 /* Side Nav */
 .side-nav {
-  min-height: calc(100vh - 56px);
-  width: 14rem;
-  margin-left: -14rem;
+  height: calc(100vh - 56px);
+  width: 10rem;
+  margin-left: -10rem;
   transition: margin .25s ease-in-out;
   background-color: #fff;
 }
@@ -102,5 +102,10 @@ body {
 }
 
 /* Others */
+.main-screen {
+  height: calc(100vh - 56px);
+  /* max-width: 100%; */
+  overflow: auto;
+}
 
 </style>
