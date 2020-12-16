@@ -41,9 +41,9 @@
       <div id="side-drawer" class="side-nav d-flex flex-column" :class="{ showdrawer: showDrawer }">
 
         <div class="side-nav-menu">
-          <b-list-group class="list-group-flush">
-            <b-list-group-item active>Active</b-list-group-item>
-            <b-list-group-item>Link</b-list-group-item>
+          <b-list-group flush>
+            <b-list-group-item :to="{ name: 'Home' }">Home</b-list-group-item>
+            <b-list-group-item :to="{ name: 'About' }">About</b-list-group-item>
             <b-list-group-item>Another Link</b-list-group-item>
             <b-list-group-item disabled>Disabled</b-list-group-item>
           </b-list-group>
@@ -61,6 +61,7 @@
       <div class="main-screen w-100">
         <div class="placeholder-content">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos magnam doloribus, nemo odio quas illum velit voluptates provident ratione, ipsa rerum! Veritatis tenetur eos harum, minima error repellat? Ad, quis eaque! Nihil, asperiores quae tempore, expedita alias assumenda, officia doloremque cum quod dolorem veritatis repudiandae dolores minus quisquam sequi cumque.
+
         </div>
         <!-- <router-view></router-view> -->
 
@@ -82,10 +83,12 @@ export default {
 </script>
 
 <style>
+/* Body */
 body {
   background-color: #f9f9f9;
 }
 
+/* Side Nav */
 .side-nav {
   min-height: calc(100vh - 56px);
   width: 14rem;
@@ -102,10 +105,17 @@ body {
   padding: .875rem 1.25rem;
   font-size: 1.2rem;
 }
+
+#side-drawer a.router-link-exact-active {
+  background-color:rgba(27,31,35,.05)
+}
+
+/* Top Navbar */
 .top-nav {
 
 }
 
+/* Others */
 .placeholder-content {
   margin: 20px
 }
