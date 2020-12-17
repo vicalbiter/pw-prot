@@ -39,8 +39,6 @@
       </b-row>
     </div>
 
-    <b-button @click="confirmDelete">Confirm</b-button>
-
   </div>
   
 
