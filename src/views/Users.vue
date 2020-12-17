@@ -1,43 +1,50 @@
 <template>
-  <div class="container-fluid pt-3 pb-5">
-    <h2>User Table</h2>
+  <div>
+    <div class="container-fluid pt-3 pb-5">
+      <h2>User Table</h2>
 
-    <b-row class="mb-3">
-      <b-col>
-        <b-form-group label="Filter:" label-for="search-filter" label-align="right" label-cols="4">
-          <b-input-group>
-            <b-form-input id="search-filter" v-model="filter" type="search" placeholder="Search..."></b-form-input>
-            <b-button @click="filter=''">Clear</b-button>
-          </b-input-group>
-        </b-form-group>
-      </b-col>
-    </b-row>
+      <b-row class="mb-3">
+        <b-col>
+          <b-form-group label="Filter:" label-for="search-filter" label-align="right" label-cols="4">
+            <b-input-group>
+              <b-form-input id="search-filter" v-model="filter" type="search" placeholder="Search..."></b-form-input>
+              <b-button @click="filter=''">Clear</b-button>
+            </b-input-group>
+          </b-form-group>
+        </b-col>
+      </b-row>
 
-    <b-row>
-      <b-col>
-        <b-table responsive head-variant="dark" bordered striped hover :items="users" :fields="fields" :filter="filter" :per-page="perPage" :current-page="currentPage" @filtered="getFilteredResults" caption-top>
+      <b-row>
+        <b-col>
+          <b-table responsive head-variant="dark" bordered striped hover :items="users" :fields="fields" :filter="filter" :per-page="perPage" :current-page="currentPage" @filtered="getFilteredResults" caption-top>
 
-          <template v-slot:cell(actions)="data">
-            <b-icon icon="trash-fill" class="action-icons" @click="deleteUser(data.item.id)"></b-icon>
-            <b-icon icon="pencil-fill" class="action-icons"></b-icon>
-          </template>
+            <template v-slot:cell(actions)="data">
+              <b-icon icon="trash-fill" class="action-icons" @click="confirmDelete(data.item.id)"></b-icon>
+              <b-icon icon="pencil-fill" class="action-icons"></b-icon>
+            </template>
 
-          <template v-if="filter" #table-caption>{{ filteredResults }} result(s) found.</template>
+            <template v-if="filter" #table-caption>{{ filteredResults }} result(s) found.</template>
 
-        </b-table>
-      </b-col>
-    </b-row>
-    
-    <b-row align-h="between">
-      <b-col cols="4">
-        <b-pagination pills size="sm" align="left" v-model="currentPage" :total-rows="rows" :per-page="perPage"></b-pagination>
-      </b-col>
-      <b-col cols="4" class="text-right mr-2">
-        <b-button variant="primary">Add User</b-button>
-      </b-col>
-    </b-row>
+          </b-table>
+        </b-col>
+      </b-row>
+      
+      <b-row align-h="between">
+        <b-col cols="4">
+          <b-pagination pills size="sm" align="left" v-model="currentPage" :total-rows="rows" :per-page="perPage"></b-pagination>
+        </b-col>
+        <b-col cols="4" class="text-right mr-2">
+          <b-button v-b-modal.delete-user variant="primary">Add User</b-button>
+        </b-col>
+      </b-row>
+    </div>
+
+    <b-button @click="confirmDelete">Confirm</b-button>
 
   </div>
+  
+
+
 </template>
 
 <script>
@@ -54,7 +61,8 @@ export default {
       filter: '',
       perPage: 5,
       currentPage: 1,
-      filteredResults: 0
+      filteredResults: 0,
+      confirmValue: ''
     }
   },
   computed: {
@@ -70,6 +78,22 @@ export default {
     },
     getFilteredResults(arr, num) {
       this.filteredResults = num
+    },
+    confirmDelete(id) {
+      this.confirmValue = ''
+      this.$bvModal.msgBoxConfirm('Are you sure?', {
+        size: 'sm',
+        okVariant: 'danger',
+        okTitle: 'Yes',
+        cancelTitle: 'Cancel',
+        centered: true
+      })
+        .then(value => {
+          this.deleteUser(id)
+        })
+        .catch(err => {
+          console.log('An error ocurred')
+        })
     }
   },
   mounted() {
