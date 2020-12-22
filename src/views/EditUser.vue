@@ -88,8 +88,8 @@
             </b-col>
 
             <b-col v-if="!form.paid">
-              <b-button v-if="!enableManualAccess" size="sm" variant="info" @click="enableManualAccess=!enableManualAccess">Habilitar Acceso Manual</b-button>
-              <b-button v-if="enableManualAccess" size="sm" variant="info" @click="enableManualAccess=!enableManualAccess">Deshabilitar Acceso Manual</b-button>            
+              <b-button v-if="!enableManualAccess" size="sm" variant="warning" @click="enableManualAccess=!enableManualAccess">Habilitar Acceso Manual</b-button>
+              <b-button v-if="enableManualAccess" size="sm" variant="warning" @click="enableManualAccess=!enableManualAccess">Deshabilitar Acceso Manual</b-button>            
             </b-col>
           </b-row>
           <!-- Manual Access Control -->
