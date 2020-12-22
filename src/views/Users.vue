@@ -56,7 +56,7 @@ export default {
         { key: 'id', label: 'ID', class: 'centered-cell'},
         'name', 
         'email',
-        { key: 'user_type', label: 'UT'}, 
+        { key: 'userType', label: 'UT'}, 
         // 'paid',
         // { key: 'manual_access', label: 'MA'},
         // 'access_until',

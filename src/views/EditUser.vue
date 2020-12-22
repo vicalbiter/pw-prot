@@ -53,8 +53,8 @@
         <b-form-group id="input-group-3" label="Tipo de usuaria:" label-for="input-3">
           <b-form-select
             id="input-3"
-            v-model="form.user_type"
-            :options="user_types"
+            v-model="form.userType"
+            :options="userTypes"
             required
           ></b-form-select>
         </b-form-group>
@@ -63,39 +63,43 @@
         <b-form-group id="input-group-4" label="Login:" label-for="input-4">
           <b-form-input
             id="input-4"
-            v-model="form.login_type"
+            v-model="form.loginType"
             required
             disabled
           ></b-form-input>
         </b-form-group>
 
-        <!-- Paid -->
-        <b-row align-v="center">
-          <b-col>
-            <b-form-group id="input-radio-group" label="Pagado:" label-for="radio-group" v-slot="{ ariaDescribedby }">
-              <b-form-radio-group
-                id="radio-group"
-                v-model="form.paid"
-                :aria-describedby="ariaDescribedby"
-                :options="paid_options"
-              >
-              </b-form-radio-group>
-              <!-- <b-form-text v-if="!form.paid">Para dar acceso manual, selecciona "Sí"</b-form-text> -->
-            </b-form-group>
-            
-          </b-col>
 
-          <b-col v-if="!form.paid">
-            <b-button v-if="!enableManualAccess" size="sm" variant="info" @click="enableManualAccess=!enableManualAccess">Habilitar Acceso Manual</b-button>
-            <b-button v-if="enableManualAccess" size="sm" variant="info" @click="enableManualAccess=!enableManualAccess">Deshabilitar Acceso Manual</b-button>            
-          </b-col>
-        </b-row>
-        <!-- Manual Access Control -->
-        <div class="mt-2 mb-2">
-          <label for="access_until">Acceso hasta:</label>
-          <b-form-datepicker id="access_until" v-model="form.access_until" :disabled="manualAccess"></b-form-datepicker>
+        <!-- Paid Info -->
+        <div v-if="form.userType === 'user'">
+           <!-- Paid Radio Buttons-->
+          <b-row align-v="center">
+            <b-col>
+              <b-form-group id="input-radio-group" label="Pagado:" label-for="radio-group" v-slot="{ ariaDescribedby }">
+                <b-form-radio-group
+                  id="radio-group"
+                  v-model="form.paid"
+                  :aria-describedby="ariaDescribedby"
+                  :options="paid_options"
+                >
+                </b-form-radio-group>
+                <!-- <b-form-text v-if="!form.paid">Para dar acceso manual, selecciona "Sí"</b-form-text> -->
+              </b-form-group>
+              
+            </b-col>
+
+            <b-col v-if="!form.paid">
+              <b-button v-if="!enableManualAccess" size="sm" variant="info" @click="enableManualAccess=!enableManualAccess">Habilitar Acceso Manual</b-button>
+              <b-button v-if="enableManualAccess" size="sm" variant="info" @click="enableManualAccess=!enableManualAccess">Deshabilitar Acceso Manual</b-button>            
+            </b-col>
+          </b-row>
+          <!-- Manual Access Control -->
+          <div class="mt-2 mb-4">
+            <label for="accessUntil">Acceso hasta:</label>
+            <b-form-datepicker id="accessUntil" v-model="form.accessUntil" :disabled="manualAccess"></b-form-datepicker>
+          </div>
         </div>
-
+        
         <!-- Submit -->
         <b-button type="submit" variant="primary">Aceptar</b-button>
       </b-form>
@@ -116,23 +120,38 @@ export default {
         name: '',
         email: '',
         paid: 'no',
-        user_type: '',
-        login_type: '',
-        access_until: '',
+        userType: '',
+        loginType: '',
+        accessUntil: '',
         phone: '',
       },
-      user_types: ['user', 'coach', 'admin'],
+      userTypes: ['user', 'coach', 'admin'],
       paid_options: [
         { text: "Sí", value: true},
         { text: "No", value: false}
       ],
+      uri: '',
       disableInputs: false,
       enableManualAccess: false
     }
   },
   methods: {
     onSubmit() {
-
+      fetch(this.uri, {
+        method: "PATCH",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          name: this.form.name, 
+          email: this.form.email,
+          paid: this.form.paid,
+          userType: this.form.userType,
+          phone: this.form.phone,
+          accessUntil: this.form.accessUntil,
+          loginType: this.form.loginType 
+        })
+      }).then(() => { 
+        this.$router.push({ name: 'Users'})
+      }).catch((err) => console.log(err.message))
     }
   },
   computed: {
@@ -149,18 +168,18 @@ export default {
     }
   },
   mounted() {
-    let uri = "http://localhost:3000/users/" + this.$route.params.user_id
-    fetch(uri)
+    this.uri = "http://localhost:3000/users/" + this.$route.params.user_id
+    fetch(this.uri)
       .then(res => res.json())
       .then(data => {
         this.form.name = data.name
         this.form.email = data.email
         this.form.paid = data.paid
-        this.form.user_type = data.user_type
+        this.form.userType = data.userType
         this.form.phone = data.phone
-        this.form.access_until = data.access_until
-        this.form.login_type = data.login_type
-        if (this.form.login_type !== "email") {
+        this.form.accessUntil = data.accessUntil
+        this.form.loginType = data.loginType
+        if (this.form.loginType !== "email") {
           this.disableInputs = true
         }
       })
