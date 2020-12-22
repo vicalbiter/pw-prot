@@ -34,9 +34,9 @@
         <b-col cols="4">
           <b-pagination pills size="sm" align="left" v-model="currentPage" :total-rows="rows" :per-page="perPage"></b-pagination>
         </b-col>
-        <b-col cols="4" class="text-right mr-2">
+        <!-- <b-col cols="4" class="text-right mr-2">
           <b-button variant="primary" @click="$router.push({ name: 'AddUser'})">Add User</b-button>
-        </b-col>
+        </b-col> -->
       </b-row>
     </div>
 

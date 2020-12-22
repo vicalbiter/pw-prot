@@ -69,8 +69,8 @@
           </b-form-radio-group>
 
           <!-- Manual Access Control -->
-          <div v-if="form.paid">
-            <label for="access_until">Access until:</label>
+          <div v-if="form.paid" class="mt-2">
+            <label for="access_until">Accesso hasta:</label>
             <b-form-datepicker id="access_until" v-model="form.access_until"></b-form-datepicker>
           </div>
         </b-form-group>
@@ -80,14 +80,10 @@
       </b-form>
     </div>
 
-    <div>
-      {{ $route.params.user_id }}
-    </div>
-
     <!-- Test Form -->
-    <b-card class="mt-3" header="Form Data Result">
+    <!-- <b-card class="mt-3" header="Form Data Result">
       <pre class="m-0">{{ form }}</pre>
-    </b-card>
+    </b-card> -->
   </div>  
 </template>
 
