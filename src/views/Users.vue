@@ -62,7 +62,7 @@ export default {
         // 'access_until',
         { key: 'actions', label: 'Actions', class: 'centered-cell'}],
       filter: '',
-      perPage: 5,
+      perPage: 8,
       currentPage: 1,
       filteredResults: 0,
       confirmValue: ''
@@ -84,11 +84,11 @@ export default {
     },
     confirmDelete(id) {
       this.confirmValue = ''
-      this.$bvModal.msgBoxConfirm('Are you sure?', {
+      this.$bvModal.msgBoxConfirm('¿Estás segura?', {
         size: 'sm',
         okVariant: 'danger',
-        okTitle: 'Yes',
-        cancelTitle: 'Cancel',
+        okTitle: 'Sí',
+        cancelTitle: 'Cancelar',
         centered: true
       })
         .then(value => {

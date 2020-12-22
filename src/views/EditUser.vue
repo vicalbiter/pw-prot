@@ -41,12 +41,11 @@
             placeholder="Ingrese el teléfono..."
             type="tel"
             :disabled="disableInputs"
-            :state="telState"
             required
           ></b-form-input>
-          <b-form-invalid-feedback id="input-group-tel">
+          <!-- <b-form-invalid-feedback id="input-group-tel">
             El número debe ser de al menos 10 dígitos
-          </b-form-invalid-feedback>
+          </b-form-invalid-feedback> -->
         </b-form-group>
 
         <!-- User Type -->
