@@ -62,13 +62,12 @@
             id="radio-group"
             v-model="form.paid"
             :aria-describedby="ariaDescribedby"
+            :options="paid_options"
           >
-            <b-form-radio value="yes">Sí</b-form-radio>
-            <b-form-radio value="no">No</b-form-radio>
           </b-form-radio-group>
 
           <!-- Manual Access Control -->
-          <div v-if="form.paid === 'yes'">
+          <div v-if="form.paid">
             <label for="access_until">Access until:</label>
             <b-form-datepicker id="access_until" v-model="form.access_until"></b-form-datepicker>
           </div>
@@ -93,14 +92,18 @@ export default {
       form: {
         name: '',
         email: '',
-        paid: 'no',
+        paid: false,
         user_type: '',
         manual_acces: '',
         login_type: '',
         access_until: '',
         phone: '',
       },
-      user_types: ['user', 'coach', 'admin']
+      user_types: ['user', 'coach', 'admin'],
+      paid_options: [
+        { text: "Sí", value: true},
+        { text: "No", value: false}
+      ]
     }
   },
   methods: {
