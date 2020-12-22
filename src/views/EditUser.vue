@@ -18,6 +18,7 @@
             type="email"
             placeholder="Ingrese el email..."
             required
+            :disabled="disableInputs"
           ></b-form-input>
         </b-form-group>
 
@@ -28,6 +29,7 @@
             v-model="form.name"
             placeholder="Ingrese el nombre completo..."
             required
+            :disabled="disableInputs"
           ></b-form-input>
         </b-form-group>
 
@@ -38,6 +40,7 @@
             v-model="form.phone"
             placeholder="Ingrese el teléfono..."
             type="tel"
+            :disabled="disableInputs"
             :state="telState"
             required
           ></b-form-input>
@@ -47,7 +50,7 @@
         </b-form-group>
 
         <!-- User Type -->
-        <b-form-group id="input-group-3" label="Tipo:" label-for="input-3">
+        <b-form-group id="input-group-3" label="Tipo de usuaria:" label-for="input-3">
           <b-form-select
             id="input-3"
             v-model="form.user_type"
@@ -56,27 +59,45 @@
           ></b-form-select>
         </b-form-group>
 
-        <!-- Paid -->
-        <b-form-group id="input-radio-group" label="Pagado:" label-for="radio-group" v-slot="{ ariaDescribedby }" description="Para dar acceso manual, selecciona 'Sí'">
-          <b-form-radio-group
-            id="radio-group"
-            v-model="form.paid"
-            :aria-describedby="ariaDescribedby"
-            :options="paid_options"
-          >
-            <!-- <b-form-radio value="yes">Sí</b-form-radio>
-            <b-form-radio value="no">No</b-form-radio> -->
-          </b-form-radio-group>
-
-          <!-- Manual Access Control -->
-          <div v-if="form.paid" class="mt-2">
-            <label for="access_until">Accesso hasta:</label>
-            <b-form-datepicker id="access_until" v-model="form.access_until"></b-form-datepicker>
-          </div>
+        <!-- Login Type -->
+        <b-form-group id="input-group-4" label="Login:" label-for="input-4">
+          <b-form-input
+            id="input-4"
+            v-model="form.login_type"
+            required
+            disabled
+          ></b-form-input>
         </b-form-group>
 
+        <!-- Paid -->
+        <b-row align-v="center">
+          <b-col>
+            <b-form-group id="input-radio-group" label="Pagado:" label-for="radio-group" v-slot="{ ariaDescribedby }">
+              <b-form-radio-group
+                id="radio-group"
+                v-model="form.paid"
+                :aria-describedby="ariaDescribedby"
+                :options="paid_options"
+              >
+              </b-form-radio-group>
+              <!-- <b-form-text v-if="!form.paid">Para dar acceso manual, selecciona "Sí"</b-form-text> -->
+            </b-form-group>
+            
+          </b-col>
+
+          <b-col v-if="!form.paid">
+            <b-button v-if="!enableManualAccess" size="sm" variant="info" @click="enableManualAccess=!enableManualAccess">Habilitar Acceso Manual</b-button>
+            <b-button v-if="enableManualAccess" size="sm" variant="info" @click="enableManualAccess=!enableManualAccess">Deshabilitar Acceso Manual</b-button>            
+          </b-col>
+        </b-row>
+        <!-- Manual Access Control -->
+        <div class="mt-2 mb-2">
+          <label for="access_until">Acceso hasta:</label>
+          <b-form-datepicker id="access_until" v-model="form.access_until" :disabled="manualAccess"></b-form-datepicker>
+        </div>
+
         <!-- Submit -->
-        <b-button type="submit" variant="primary">Submit</b-button>
+        <b-button type="submit" variant="primary">Aceptar</b-button>
       </b-form>
     </div>
 
@@ -96,7 +117,6 @@ export default {
         email: '',
         paid: 'no',
         user_type: '',
-        manual_acces: '',
         login_type: '',
         access_until: '',
         phone: '',
@@ -105,7 +125,9 @@ export default {
       paid_options: [
         { text: "Sí", value: true},
         { text: "No", value: false}
-      ]
+      ],
+      disableInputs: false,
+      enableManualAccess: false
     }
   },
   methods: {
@@ -121,6 +143,9 @@ export default {
       else {
         return null;
       }
+    },
+    manualAccess() {
+      return !(this.form.paid || this.enableManualAccess)
     }
   },
   mounted() {
@@ -134,6 +159,10 @@ export default {
         this.form.user_type = data.user_type
         this.form.phone = data.phone
         this.form.access_until = data.access_until
+        this.form.login_type = data.login_type
+        if (this.form.login_type !== "email") {
+          this.disableInputs = true
+        }
       })
   }
 }
@@ -146,4 +175,5 @@ export default {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
+
 </style>
