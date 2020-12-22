@@ -20,7 +20,7 @@
 
             <template v-slot:cell(actions)="data">
               <b-icon icon="trash-fill" class="action-icons" @click="confirmDelete(data.item.id)"></b-icon>
-              <b-icon icon="pencil-fill" class="action-icons"></b-icon>
+              <b-icon icon="pencil-fill" class="action-icons" @click="$router.push({ name: 'EditUser', params: { user_id: data.item.id } })"></b-icon>
             </template>
 
             <template v-if="filter" #table-caption>{{ filteredResults }} result(s) found.</template>
