@@ -119,7 +119,11 @@ export default {
   font-size: 1.5em;
 }
 
-.icon-delete {
+.action-icons:hover {
+  color: rgb(119, 119, 119);
+}
+
+/* .icon-delete {
   border: solid 1px #f97d7d;
   color: #f97d7d;
 }
@@ -137,7 +141,7 @@ export default {
 .icon-edit:hover {
   border: solid 1px #0eddff;
   color: #0eddff;
-}
+} */
 
 
 .centered-cell {

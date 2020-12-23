@@ -45,10 +45,13 @@
         </div>
 
         <div class="side-nav-footer mt-auto">
-          <!-- <b-list-group class="list-group-flush">
+          <b-list-group class="list-group-flush">
             <b-list-group-item>Link</b-list-group-item>
-            <b-list-group-item>Another Link</b-list-group-item>
-          </b-list-group> -->
+            <b-list-group-item>
+              <b-icon icon="box-arrow-in-left"></b-icon>
+              Salir
+            </b-list-group-item>
+          </b-list-group>
         </div>
       </div>
 
@@ -100,6 +103,7 @@ body {
 
 #side-drawer a.router-link-exact-active {
   background-color:rgba(27,31,35,.05);
+  border-left: solid 5px var(--primary);
 }
 
 .showdrawer {
