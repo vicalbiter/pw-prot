@@ -16,11 +16,11 @@
 
       <b-row>
         <b-col>
-          <b-table responsive head-variant="dark" bordered striped hover :items="users" :fields="fields" :filter="filter" :per-page="perPage" :current-page="currentPage" @filtered="getFilteredResults" caption-top>
+          <b-table responsive outlined hover :items="users" :fields="fields" :filter="filter" :per-page="perPage" :current-page="currentPage" @filtered="getFilteredResults" caption-top class="user-table">
 
             <template v-slot:cell(actions)="data">
-              <b-icon icon="trash-fill" class="action-icons" @click="confirmDelete(data.item.id)"></b-icon>
-              <b-icon icon="pencil-fill" class="action-icons" @click="$router.push({ name: 'EditUser', params: { user_id: data.item.id } })"></b-icon>
+              <b-icon icon="trash-fill" class="action-icons icon-delete" @click="confirmDelete(data.item.id)"></b-icon>
+              <b-icon icon="pencil-fill" class="action-icons icon-edit" @click="$router.push({ name: 'EditUser', params: { user_id: data.item.id } })"></b-icon>
             </template>
 
             <template v-if="filter" #table-caption>{{ filteredResults }} result(s) found.</template>
@@ -54,13 +54,13 @@ export default {
       users: [],
       fields: [
         { key: 'id', label: 'ID', class: 'centered-cell'},
-        'name', 
+        { key: 'name', label: 'Nombre'}, 
         'email',
-        { key: 'userType', label: 'UT'}, 
-        'paid',
+        { key: 'userType', label: 'Tipo'}, 
+        { key: 'paid', label: 'Pagado'},
         // { key: 'manual_access', label: 'MA'},
-        'accessUntil',
-        { key: 'actions', label: 'Actions', class: 'centered-cell'}],
+        { key: 'accessUntil', label: 'Exp. Acceso'},
+        { key: 'actions', label: 'Acciones', class: 'centered-cell'}],
       filter: '',
       perPage: 8,
       currentPage: 1,
@@ -113,11 +113,38 @@ export default {
   margin: 2px 4px;
   cursor: pointer;
   color: #bbb;
+  padding: 3px;
+  border: solid 1px #bbb;
+  border-radius: 5px;
+  font-size: 1.5em;
 }
-.action-icons:hover {
-  color: #777;
+
+.icon-delete {
+  border: solid 1px #f97d7d;
+  color: #f97d7d;
 }
+
+.icon-delete:hover {
+  border: solid 1px #f73434;
+  color: #f73434;
+}
+
+.icon-edit {
+  border: solid 1px #78ecff;
+  color: #78ecff;
+}
+
+.icon-edit:hover {
+  border: solid 1px #0eddff;
+  color: #0eddff;
+}
+
+
 .centered-cell {
   text-align: center;
+}
+
+.user-table {
+  background-color: white;
 }
 </style>

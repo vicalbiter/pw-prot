@@ -3,7 +3,7 @@
   <div>
     <!-- Top Navbar Menu -->
     <div class="top-nav">
-      <b-navbar type="dark" variant="info">
+      <b-navbar type="dark" variant="primary">
         <b-navbar-brand href="#" @click="showDrawer = !showDrawer"><b-icon icon="list"></b-icon> Pink Workout</b-navbar-brand>
 
         <!-- Left aligned nav items -->
@@ -31,18 +31,24 @@
 
         <div class="side-nav-menu">
           <b-list-group flush>
-            <b-list-group-item :to="{ name: 'Home' }">Home</b-list-group-item>
-            <b-list-group-item :to="{ name: 'Users' }">Users</b-list-group-item>
+            <b-list-group-item :to="{ name: 'Home' }">
+              <b-icon icon="house-door-fill"></b-icon>
+              <span class="ml-2">Principal</span>
+              </b-list-group-item>
+            <b-list-group-item :to="{ name: 'Users' }">
+              <b-icon icon="person-fill"></b-icon>
+              <span class="ml-2">Lista de Usuarias</span>
+              </b-list-group-item>
             <b-list-group-item>Another Link</b-list-group-item>
             <b-list-group-item disabled>Disabled</b-list-group-item>
           </b-list-group>
         </div>
 
         <div class="side-nav-footer mt-auto">
-          <b-list-group class="list-group-flush">
+          <!-- <b-list-group class="list-group-flush">
             <b-list-group-item>Link</b-list-group-item>
             <b-list-group-item>Another Link</b-list-group-item>
-          </b-list-group>
+          </b-list-group> -->
         </div>
       </div>
 
@@ -77,10 +83,14 @@ body {
 /* Side Nav */
 .side-nav {
   height: calc(100vh - 56px);
-  width: 10rem;
-  margin-left: -10rem;
+  width: 15rem;
+  margin-left: -15rem;
   transition: margin .25s ease-in-out;
   background-color: #fff;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: rgba(0,0,0,.05);
+  font-size: 0.9rem;
 }
 
 .side-nav .logo {
@@ -89,7 +99,7 @@ body {
 }
 
 #side-drawer a.router-link-exact-active {
-  background-color:rgba(27,31,35,.05)
+  background-color:rgba(27,31,35,.05);
 }
 
 .showdrawer {
