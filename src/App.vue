@@ -31,4 +31,12 @@ export default {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #32325d;
+}
 </style>

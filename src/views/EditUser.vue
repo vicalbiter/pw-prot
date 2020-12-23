@@ -1,108 +1,118 @@
 <template>
   <div class="container pt-3">
     <button @click="$router.push({ name: 'Users' })">Go Back</button>
-    <h2>Edit User</h2>
 
-    <div class="form-container">
-      <b-form @submit.prevent="onSubmit">
+    <!-- <div class="form-container"> -->
+      
+    <b-card no-body class="mt-4 mb-4 edit-user-card">
 
-        <!-- Email -->
-        <b-form-group
-          id="input-group-1"
-          label="Email:"
-          label-for="input-1"
-        >
-          <b-form-input
-            id="input-1"
-            v-model="form.email"
-            type="email"
-            placeholder="Ingrese el email..."
-            required
-            :disabled="disableInputs"
-          ></b-form-input>
-        </b-form-group>
+      <b-card-header>
+        <h3 class="mb-0">Editar Usuaria</h3>
+      </b-card-header>
 
-        <!-- Name -->
-        <b-form-group id="input-group-2" label="Nombre:" label-for="input-2">
-          <b-form-input
-            id="input-2"
-            v-model="form.name"
-            placeholder="Ingrese el nombre completo..."
-            required
-            :disabled="disableInputs"
-          ></b-form-input>
-        </b-form-group>
-
-        <!-- Phone Number -->
-        <b-form-group id="input-group-tel" label="Teléfono:" label-for="input-tel">
-          <b-form-input
-            id="input-tel"
-            v-model="form.phone"
-            placeholder="Ingrese el teléfono..."
-            type="tel"
-            :disabled="disableInputs"
-            required
-          ></b-form-input>
-          <!-- <b-form-invalid-feedback id="input-group-tel">
-            El número debe ser de al menos 10 dígitos
-          </b-form-invalid-feedback> -->
-        </b-form-group>
-
-        <!-- User Type -->
-        <b-form-group id="input-group-3" label="Tipo de usuaria:" label-for="input-3">
-          <b-form-select
-            id="input-3"
-            v-model="form.userType"
-            :options="userTypes"
-            required
-          ></b-form-select>
-        </b-form-group>
-
-        <!-- Login Type -->
-        <b-form-group id="input-group-4" label="Login:" label-for="input-4">
-          <b-form-input
-            id="input-4"
-            v-model="form.loginType"
-            required
-            disabled
-          ></b-form-input>
-        </b-form-group>
-
-
-        <!-- Paid Info -->
-        <div v-if="form.userType === 'user'">
-           <!-- Paid Radio Buttons-->
-          <b-row align-v="center">
-            <b-col>
-              <b-form-group id="input-radio-group" label="Pagado:" label-for="radio-group" v-slot="{ ariaDescribedby }">
-                <b-form-radio-group
-                  id="radio-group"
-                  v-model="form.paid"
-                  :aria-describedby="ariaDescribedby"
-                  :options="paid_options"
-                >
-                </b-form-radio-group>
-                <!-- <b-form-text v-if="!form.paid">Para dar acceso manual, selecciona "Sí"</b-form-text> -->
-              </b-form-group>
-              
-            </b-col>
-
-            <b-col v-if="!form.paid">
-              <b-button v-if="!enableManualAccess" size="sm" variant="warning" @click="enableManualAccess=!enableManualAccess">Habilitar Acceso Manual</b-button>
-              <b-button v-if="enableManualAccess" size="sm" variant="warning" @click="enableManualAccess=!enableManualAccess">Deshabilitar Acceso Manual</b-button>            
-            </b-col>
-          </b-row>
-          <!-- Manual Access Control -->
-          <div class="mt-2 mb-4">
-            <label for="accessUntil">Acceso hasta:</label>
-            <b-form-datepicker id="accessUntil" v-model="form.accessUntil" :disabled="manualAccess"></b-form-datepicker>
+      <b-card-body>
+        <b-form @submit.prevent="onSubmit">
+  
+          <!-- Email -->
+          <b-form-group
+            id="input-group-1"
+            label="Email:"
+            label-for="input-1"
+          >
+            <b-form-input
+              id="input-1"
+              v-model="form.email"
+              type="email"
+              placeholder="Ingrese el email..."
+              required
+              :disabled="disableInputs"
+            ></b-form-input>
+          </b-form-group>
+  
+          <!-- Name -->
+          <b-form-group id="input-group-2" label="Nombre:" label-for="input-2">
+            <b-form-input
+              id="input-2"
+              v-model="form.name"
+              placeholder="Ingrese el nombre completo..."
+              required
+              :disabled="disableInputs"
+            ></b-form-input>
+          </b-form-group>
+  
+          <!-- Phone Number -->
+          <b-form-group id="input-group-tel" label="Teléfono:" label-for="input-tel">
+            <b-form-input
+              id="input-tel"
+              v-model="form.phone"
+              placeholder="Ingrese el teléfono..."
+              type="tel"
+              :disabled="disableInputs"
+              required
+            ></b-form-input>
+            <!-- <b-form-invalid-feedback id="input-group-tel">
+              El número debe ser de al menos 10 dígitos
+            </b-form-invalid-feedback> -->
+          </b-form-group>
+  
+          <!-- User Type -->
+          <b-form-group id="input-group-3" label="Tipo de usuaria:" label-for="input-3">
+            <b-form-select
+              id="input-3"
+              v-model="form.userType"
+              :options="userTypes"
+              required
+            ></b-form-select>
+          </b-form-group>
+  
+          <!-- Login Type -->
+          <b-form-group id="input-group-4" label="Login:" label-for="input-4">
+            <b-form-input
+              id="input-4"
+              v-model="form.loginType"
+              required
+              disabled
+            ></b-form-input>
+          </b-form-group>
+  
+  
+          <!-- Paid Info -->
+          <div v-if="form.userType === 'user'">
+             <!-- Paid Radio Buttons-->
+            <b-row align-v="center">
+              <b-col>
+                <b-form-group id="input-radio-group" label="Pagado:" label-for="radio-group" v-slot="{ ariaDescribedby }">
+                  <b-form-radio-group
+                    id="radio-group"
+                    v-model="form.paid"
+                    :aria-describedby="ariaDescribedby"
+                    :options="paid_options"
+                  >
+                  </b-form-radio-group>
+                  <!-- <b-form-text v-if="!form.paid">Para dar acceso manual, selecciona "Sí"</b-form-text> -->
+                </b-form-group>
+                
+              </b-col>
+  
+              <b-col v-if="!form.paid">
+                <b-button v-if="!enableManualAccess" size="sm" variant="warning" @click="enableManualAccess=!enableManualAccess">Habilitar Acceso Manual</b-button>
+                <b-button v-if="enableManualAccess" size="sm" variant="warning" @click="enableManualAccess=!enableManualAccess">Deshabilitar Acceso Manual</b-button>            
+              </b-col>
+            </b-row>
+            <!-- Manual Access Control -->
+            <div class="mt-2 mb-4">
+              <label for="accessUntil">Acceso hasta:</label>
+              <b-form-datepicker id="accessUntil" v-model="form.accessUntil" :disabled="manualAccess"></b-form-datepicker>
+            </div>
           </div>
-        </div>
-        
-        <!-- Submit -->
-        <b-button type="submit" variant="primary">Aceptar</b-button>
-      </b-form>
-    </div>
+          
+          <!-- Submit -->
+          <b-button type="submit" variant="primary">Aceptar</b-button>
+        </b-form>
+      </b-card-body>
+
+    </b-card>
+    <!-- </div> -->
 
     <!-- Test Form -->
     <!-- <b-card class="mt-3" header="Form Data Result">
@@ -187,11 +197,15 @@ export default {
 </script>
 
 <style>
-.form-container {
+/* .form-container {
   margin: 20px;
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+} */
+
+.edit-user-card h3{
+  font-size: 1.2rem;
 }
 
 </style>

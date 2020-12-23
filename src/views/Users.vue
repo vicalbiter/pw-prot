@@ -1,7 +1,8 @@
 <template>
   <div>
+    
     <div class="container-fluid pt-3 pb-5">
-      <h2>User Table</h2>
+      <h3>User Table</h3>
 
       <b-row class="mb-3">
         <b-col>
