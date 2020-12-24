@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Users from '../views/Users.vue'
 import AddUser from '../views/AddUser.vue'
 import EditUser from '../views/EditUser.vue'
+import Videos from '../views/Videos.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/users/edit-user/:user_id',
     name: 'EditUser',
     component: EditUser
+  },
+  {
+    path: 'videos',
+    name: 'Videos',
+    component: Videos
   }
 ]
 

@@ -39,7 +39,9 @@
               <b-icon icon="person-fill"></b-icon>
               <span class="ml-2">Lista de Usuarias</span>
               </b-list-group-item>
-            <b-list-group-item>Another Link</b-list-group-item>
+            <b-list-group-item :to="{ name: 'Videos' }">
+              Videos
+            </b-list-group-item>
             <b-list-group-item disabled>Disabled</b-list-group-item>
           </b-list-group>
         </div>
