@@ -4,12 +4,19 @@
     <div class="container-fluid pt-3 pb-5">
       <h3>User Table</h3>
 
-      <b-row class="mb-3">
-        <b-col>
-          <b-form-group label="Filter:" label-for="search-filter" label-align="right" label-cols="4">
+      <b-row align-h="between" class="mb-1">
+        <!-- Results per Page -->
+        <b-col cols="4">
+          <b-form-group label="Per page:" label-for="per-page-select" label-cols="5" label-align="left" label-size="sm">
+            <b-form-select id="per-page-select" size="sm" v-model="perPage" :options="pageOptions"></b-form-select>
+          </b-form-group>
+        </b-col>
+        <!-- Filter Search -->
+        <b-col cols="6">
+          <b-form-group label="Filter:" label-for="search-filter" label-align="right" label-cols="2" label-size="sm">
             <b-input-group>
-              <b-form-input id="search-filter" v-model="filter" type="search" placeholder="Search..."></b-form-input>
-              <b-button @click="filter=''">Clear</b-button>
+              <b-form-input id="search-filter" size="sm" v-model="filter" type="search" placeholder="Search..."></b-form-input>
+              <b-button class="ml-1" size="sm" @click="filter=''">Clear</b-button>
             </b-input-group>
           </b-form-group>
         </b-col>
@@ -63,9 +70,10 @@ export default {
         { key: 'accessUntil', label: 'Exp. Acceso'},
         { key: 'actions', label: 'Acciones', class: 'centered-cell'}],
       filter: '',
-      perPage: 8,
+      perPage: 5,
       currentPage: 1,
       filteredResults: 0,
+      pageOptions: [5, 10, 20],
       confirmValue: ''
     }
   },
