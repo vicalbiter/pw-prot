@@ -31,7 +31,7 @@
               <b-icon icon="pencil-fill" class="action-icons icon-edit" @click="$router.push({ name: 'EditUser', params: { user_id: data.item.id } })"></b-icon>
             </template>
 
-            <template v-if="filter" #table-caption>{{ filteredResults }} result(s) found.</template>
+            <!-- <template v-if="filter" #table-caption>{{ filteredResults }} result(s) found.</template> -->
 
           </b-table>
         </b-col>
@@ -40,7 +40,12 @@
       <!-- Table Footer -->
       <b-row align-h="between">
         <b-col cols="4">
-          <b-pagination pills size="sm" align="left" v-model="currentPage" :total-rows="rows" :per-page="perPage"></b-pagination>
+          <div v-if="!filter">
+            <b-pagination pills size="sm" align="left" v-model="currentPage" :total-rows="rows" :per-page="perPage"></b-pagination>
+          </div>
+          <div v-else>
+            <b-pagination pills size="sm" align="left" v-model="currentPage" :total-rows="filteredRows" :per-page="perPage"></b-pagination>
+          </div>
         </b-col>
         <!-- <b-col cols="4" class="text-right mr-2">
           <b-button variant="primary" @click="$router.push({ name: 'AddUser'})">Add User</b-button>
@@ -60,6 +65,7 @@ export default {
   data() {
     return {
       users: [],
+      filteredUsers: [],
       fields: [
         { key: 'id', label: 'ID', class: 'centered-cell'},
         { key: 'name', label: 'Nombre'}, 
@@ -72,6 +78,7 @@ export default {
       filter: '',
       perPage: 5,
       currentPage: 1,
+      currentFilteredPage: 1,
       filteredResults: 0,
       pageOptions: [5, 10, 20],
       confirmValue: ''
@@ -80,6 +87,9 @@ export default {
   computed: {
     rows() {
       return this.users.length
+    },
+    filteredRows() {
+      return this.filteredUsers.length
     }
   },
   methods: {
@@ -90,6 +100,8 @@ export default {
     },
     getFilteredResults(arr, num) {
       this.filteredResults = num
+      this.filteredUsers = arr
+      this.currentPage = 1
     },
     confirmDelete(id) {
       this.confirmValue = ''
