@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <b-card-group>
       
       <!-- Card with iframe -->
       <!-- <b-card no-body>
@@ -13,11 +12,9 @@
           Hola
         </b-card-body>
       </b-card> -->
+      
 
-      <b-card>
-        <b-card-header></b-card-header>
-      </b-card>
-    </b-card-group>
+
   </div>
 </template>
 
@@ -28,6 +25,9 @@ export default {
 </script>
 
 <style>
+
+
+/* iframe classes */
 .iframe-container {
   position: relative;
   overflow: hidden;
