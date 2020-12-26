@@ -550,5 +550,1027 @@
       "accessUntil": "2021-01-17",
       "phone": "2147667727"
     }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "10/16/2020",
+          "paymentAmount": "$808.78"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "12/15/2020",
+          "paymentAmount": "$804.01"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "1/4/2020",
+          "paymentAmount": "$900.31"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "10/9/2020",
+          "paymentAmount": "$997.22"
+        },
+        {
+          "paymentID": 5,
+          "paymentDate": "2/23/2020",
+          "paymentAmount": "$904.66"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "10/28/2020",
+          "paymentAmount": "$955.28"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "1/21/2020",
+          "paymentAmount": "$964.52"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "3/25/2020",
+          "paymentAmount": "$946.34"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "4/18/2020",
+          "paymentAmount": "$821.49"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "10/17/2020",
+          "paymentAmount": "$832.38"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "6/16/2020",
+          "paymentAmount": "$840.36"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "5/12/2020",
+          "paymentAmount": "$981.12"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "7/30/2020",
+          "paymentAmount": "$918.54"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "3/21/2020",
+          "paymentAmount": "$816.20"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "3/29/2020",
+          "paymentAmount": "$936.46"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "10/12/2020",
+          "paymentAmount": "$941.86"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "8/19/2020",
+          "paymentAmount": "$852.70"
+        },
+        {
+          "paymentID": 5,
+          "paymentDate": "4/28/2020",
+          "paymentAmount": "$838.98"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "10/21/2020",
+          "paymentAmount": "$941.40"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "7/19/2020",
+          "paymentAmount": "$850.43"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "9/2/2020",
+          "paymentAmount": "$855.64"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "12/15/2020",
+          "paymentAmount": "$848.31"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "6/22/2020",
+          "paymentAmount": "$816.62"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "8/11/2020",
+          "paymentAmount": "$983.81"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "1/30/2020",
+          "paymentAmount": "$886.66"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "5/13/2020",
+          "paymentAmount": "$954.74"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "6/19/2020",
+          "paymentAmount": "$869.88"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "11/7/2020",
+          "paymentAmount": "$982.65"
+        },
+        {
+          "paymentID": 5,
+          "paymentDate": "4/28/2020",
+          "paymentAmount": "$978.82"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "2/16/2020",
+          "paymentAmount": "$845.31"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "2/28/2020",
+          "paymentAmount": "$822.03"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "4/27/2020",
+          "paymentAmount": "$961.29"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "12/18/2020",
+          "paymentAmount": "$947.85"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "8/14/2020",
+          "paymentAmount": "$878.07"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "10/29/2020",
+          "paymentAmount": "$851.99"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "1/22/2020",
+          "paymentAmount": "$959.48"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "5/14/2020",
+          "paymentAmount": "$854.36"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "6/22/2020",
+          "paymentAmount": "$823.45"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "10/24/2020",
+          "paymentAmount": "$897.20"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "5/24/2020",
+          "paymentAmount": "$964.19"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "8/13/2020",
+          "paymentAmount": "$921.92"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "10/20/2020",
+          "paymentAmount": "$833.80"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "7/26/2020",
+          "paymentAmount": "$878.85"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "2/28/2020",
+          "paymentAmount": "$859.00"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "9/26/2020",
+          "paymentAmount": "$976.08"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "10/13/2020",
+          "paymentAmount": "$921.37"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "12/19/2020",
+          "paymentAmount": "$961.03"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "7/9/2020",
+          "paymentAmount": "$972.82"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "11/1/2020",
+          "paymentAmount": "$966.67"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "7/2/2020",
+          "paymentAmount": "$923.00"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "4/28/2020",
+          "paymentAmount": "$932.52"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "7/5/2020",
+          "paymentAmount": "$842.97"
+        },
+        {
+          "paymentID": 5,
+          "paymentDate": "11/14/2020",
+          "paymentAmount": "$850.97"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "3/10/2020",
+          "paymentAmount": "$948.34"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "8/11/2020",
+          "paymentAmount": "$823.55"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "10/16/2020",
+          "paymentAmount": "$845.74"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "11/11/2020",
+          "paymentAmount": "$982.42"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "4/11/2020",
+          "paymentAmount": "$829.03"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "8/8/2020",
+          "paymentAmount": "$886.25"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "8/16/2020",
+          "paymentAmount": "$962.97"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "6/12/2020",
+          "paymentAmount": "$968.78"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "9/18/2020",
+          "paymentAmount": "$915.38"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "5/30/2020",
+          "paymentAmount": "$888.01"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "10/12/2020",
+          "paymentAmount": "$932.43"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "9/16/2020",
+          "paymentAmount": "$920.54"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "5/20/2020",
+          "paymentAmount": "$869.56"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "11/1/2020",
+          "paymentAmount": "$996.37"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "2/5/2020",
+          "paymentAmount": "$923.75"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "2/22/2020",
+          "paymentAmount": "$882.25"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "10/19/2020",
+          "paymentAmount": "$879.27"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "9/23/2020",
+          "paymentAmount": "$927.45"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "10/6/2020",
+          "paymentAmount": "$812.98"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "3/2/2020",
+          "paymentAmount": "$940.70"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "10/8/2020",
+          "paymentAmount": "$915.36"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "3/21/2020",
+          "paymentAmount": "$895.64"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "2/14/2020",
+          "paymentAmount": "$855.98"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "9/15/2020",
+          "paymentAmount": "$902.34"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "3/23/2020",
+          "paymentAmount": "$861.06"
+        },
+        {
+          "paymentID": 5,
+          "paymentDate": "1/25/2020",
+          "paymentAmount": "$936.27"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "7/19/2020",
+          "paymentAmount": "$894.57"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "5/7/2020",
+          "paymentAmount": "$873.80"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "8/24/2020",
+          "paymentAmount": "$991.19"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "8/12/2020",
+          "paymentAmount": "$942.51"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "3/3/2020",
+          "paymentAmount": "$879.34"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "5/26/2020",
+          "paymentAmount": "$914.51"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "4/12/2020",
+          "paymentAmount": "$870.43"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "3/9/2020",
+          "paymentAmount": "$862.21"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "10/5/2020",
+          "paymentAmount": "$949.16"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "2/12/2020",
+          "paymentAmount": "$927.91"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "9/4/2020",
+          "paymentAmount": "$807.11"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "3/5/2020",
+          "paymentAmount": "$988.04"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "7/25/2020",
+          "paymentAmount": "$903.20"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "3/24/2020",
+          "paymentAmount": "$998.01"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "12/27/2019",
+          "paymentAmount": "$992.81"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "12/13/2020",
+          "paymentAmount": "$985.83"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "8/11/2020",
+          "paymentAmount": "$975.03"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "10/3/2020",
+          "paymentAmount": "$942.58"
+        },
+        {
+          "paymentID": 5,
+          "paymentDate": "6/16/2020",
+          "paymentAmount": "$925.30"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "12/15/2020",
+          "paymentAmount": "$808.68"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "2/14/2020",
+          "paymentAmount": "$919.95"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "1/1/2020",
+          "paymentAmount": "$888.32"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "9/21/2020",
+          "paymentAmount": "$871.16"
+        },
+        {
+          "paymentID": 5,
+          "paymentDate": "6/21/2020",
+          "paymentAmount": "$800.70"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "1/10/2020",
+          "paymentAmount": "$993.15"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "8/11/2020",
+          "paymentAmount": "$832.10"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "10/22/2020",
+          "paymentAmount": "$979.93"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "10/4/2020",
+          "paymentAmount": "$850.87"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "7/4/2020",
+          "paymentAmount": "$920.05"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "2/11/2020",
+          "paymentAmount": "$853.39"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "2/25/2020",
+          "paymentAmount": "$854.74"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "7/19/2020",
+          "paymentAmount": "$829.26"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "7/30/2020",
+          "paymentAmount": "$805.84"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "12/25/2019",
+          "paymentAmount": "$962.37"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "9/18/2020",
+          "paymentAmount": "$983.52"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "7/6/2020",
+          "paymentAmount": "$864.18"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "8/19/2020",
+          "paymentAmount": "$883.68"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "4/2/2020",
+          "paymentAmount": "$932.49"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "8/9/2020",
+          "paymentAmount": "$889.78"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "5/3/2020",
+          "paymentAmount": "$807.43"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "1/6/2020",
+          "paymentAmount": "$945.32"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "7/20/2020",
+          "paymentAmount": "$802.42"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "10/19/2020",
+          "paymentAmount": "$819.23"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "3/28/2020",
+          "paymentAmount": "$838.10"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "11/16/2020",
+          "paymentAmount": "$849.92"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "10/2/2020",
+          "paymentAmount": "$869.85"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "10/9/2020",
+          "paymentAmount": "$809.23"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "5/23/2020",
+          "paymentAmount": "$974.51"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "5/24/2020",
+          "paymentAmount": "$920.82"
+        },
+        {
+          "paymentID": 5,
+          "paymentDate": "1/9/2020",
+          "paymentAmount": "$961.91"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "11/14/2020",
+          "paymentAmount": "$871.32"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "8/14/2020",
+          "paymentAmount": "$826.35"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "11/25/2020",
+          "paymentAmount": "$928.63"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "3/27/2020",
+          "paymentAmount": "$854.43"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "5/31/2020",
+          "paymentAmount": "$825.71"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "7/15/2020",
+          "paymentAmount": "$937.68"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "7/29/2020",
+          "paymentAmount": "$936.32"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "7/10/2020",
+          "paymentAmount": "$915.45"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "6/2/2020",
+          "paymentAmount": "$884.24"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "1/21/2020",
+          "paymentAmount": "$853.58"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "11/20/2020",
+          "paymentAmount": "$860.61"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "3/1/2020",
+          "paymentAmount": "$976.17"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "5/21/2020",
+          "paymentAmount": "$829.30"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "7/15/2020",
+          "paymentAmount": "$855.44"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "3/22/2020",
+          "paymentAmount": "$873.52"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "6/22/2020",
+          "paymentAmount": "$851.33"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "7/28/2020",
+          "paymentAmount": "$829.89"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "1/2/2020",
+          "paymentAmount": "$853.63"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "6/23/2020",
+          "paymentAmount": "$826.08"
+        },
+        {
+          "paymentID": 5,
+          "paymentDate": "8/18/2020",
+          "paymentAmount": "$975.25"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "payments": [
+        {
+          "paymentID": 1,
+          "paymentDate": "12/14/2020",
+          "paymentAmount": "$820.26"
+        },
+        {
+          "paymentID": 2,
+          "paymentDate": "8/9/2020",
+          "paymentAmount": "$810.08"
+        },
+        {
+          "paymentID": 3,
+          "paymentDate": "8/26/2020",
+          "paymentAmount": "$953.87"
+        },
+        {
+          "paymentID": 4,
+          "paymentDate": "3/10/2020",
+          "paymentAmount": "$844.19"
+        },
+        {
+          "paymentID": 5,
+          "paymentDate": "3/27/2020",
+          "paymentAmount": "$961.05"
+        }
+      ]
+    }
   ]
 }
