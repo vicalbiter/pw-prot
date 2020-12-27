@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="videos-grid">
       
       <!-- Card with iframe -->
       <!-- <b-card no-body>
@@ -12,20 +12,32 @@
           Hola
         </b-card-body>
       </b-card> -->
-      
-
+      <single-video></single-video>
+      <single-video></single-video>
+      <single-video></single-video>
+      <single-video></single-video>
+      <single-video></single-video>
 
   </div>
 </template>
 
 <script>
-export default {
+import SingleVideo from './SingleVideo'
 
+export default {
+  components: {
+    SingleVideo
+  }
 }
 </script>
 
 <style>
-
+.videos-grid {
+  display: grid;
+  padding: 30px;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
 
 /* iframe classes */
 .iframe-container {
