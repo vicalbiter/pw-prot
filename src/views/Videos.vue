@@ -36,7 +36,7 @@ export default {
   display: grid;
   padding: 30px;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 /* iframe classes */
